@@ -732,7 +732,7 @@ class Program
             {
                 positionMonstre = new Vector2f(Utilitaire.GenererNombre(0, (int)monde.Largeur), Utilitaire.GenererNombre(0, (int)monde.Hauteur));
             }
-            while (!monde.EstPositionValide(positionMonstre));
+            while (!monde.EstPositionValide(positionMonstre) && positionMonstre != posInitHero);
 
 
             // Générer au hasard soit des Dino, des Zombie ou des Squelette
@@ -897,7 +897,9 @@ class Program
                             {
                                 musicJeu.Stop();
                                 musicHeroMort.Play();
+                                Console.ForegroundColor = ConsoleColor.Red;
                                 Console.WriteLine("Vous etes mort!");
+                                Console.ResetColor();
                                 bLink = false;
                             }
                         }
@@ -959,7 +961,8 @@ class Program
                     if (!bLink || bQuitter)
                     {
                         fenetre.Close();
-                        Console.WriteLine("Faites Enter pour quitter");
+                        Console.WriteLine();
+                        Console.Write("Faites Enter pour quitter . . . ");
                         Console.ReadLine();
                     }
                 }
@@ -977,13 +980,14 @@ class Program
                 {
                     musicMenu.Stop();
                     fenetre.Close();
-                    Console.WriteLine("Faites Enter pour quitter");
+                    Console.WriteLine();
+                    Console.Write("Faites Enter pour quitter . . . ");
                     Console.ReadLine();
                 }
             }
             else //Si le curseur est pas sur quitterMenu:
             {
-                quitterMenu.Color = Color.White; //quitteerMenu reste blanc
+                quitterMenu.Color = Color.White; //quitteerMenu reste blanc`
             }
 
             // Rafraichir la fenêtre

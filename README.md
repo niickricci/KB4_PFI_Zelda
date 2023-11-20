@@ -1,8 +1,6 @@
 # PFI - Zelda
 ## Description
-Projet d'intégration finale au cours de Programmation Orienté Objet (POO) - Hiver 2023
-## Autheur
+Final Integration Project for Object-Oriented Programming (OOP) Course - Winter 2023
+## Authors
 - [@niickricci](https://www.github.com/niickricci)
-## License
-
-[MIT](https://choosealicense.com/licenses/mit/)
+[![MIT License](https://img.shields.io/badge/License-MIT-green.svg)](https://choosealicense.com/licenses/mit/)
